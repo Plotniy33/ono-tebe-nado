@@ -1,3 +1,14 @@
+a {
+  color: #000;
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .header {
   display: grid;
   grid-template-columns: 2fr auto 2fr;
@@ -11,25 +22,13 @@
   list-style: circle;
 }
 
-.header__link,
-.footer__link {
-  color: #000;
-  font-family: Raleway;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-li:first-child {
-  list-style: none;
-}
-
 .header__link_active,
 .footer__link_active {
   text-decoration: none;
+}
+
+.header__links-list-item_no-bullit {
+  list-style: none;
 }
 
 .header__logo-img {
@@ -41,23 +40,12 @@ li:first-child {
 .address {
   max-width: 240px;
   justify-self: end;
-}
-
-.header__address,
-.footer__address {
-  color: #000;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24.3px; /* 135% */
+  line-height: 135%;
   text-decoration: none;
-}
-
-a.header__address {
-  display: inline-block;
-  text-decoration: underline;
-  text-underline-offset: 4px;
 }
 
 .cover {
@@ -94,8 +82,10 @@ a.header__address {
 }
 
 .aligned-text {
+  display: flex;
   font-style: normal;
   line-height: 115%;
+  align-self: start;
 }
 
 .letter-spacing-extended {
@@ -103,14 +93,19 @@ a.header__address {
 }
 
 .aligned-text_center {
-  text-align: center;
+  display: flex;
+  align-self: center;
   line-height: 100%;
 }
 
 .aligned-text_right {
-  text-align: right;
+  display: flex;
+  align-self: end;
   line-height: 100%;
-  margin-right: -30px;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;
 }
 
 .cover__description {
@@ -150,7 +145,7 @@ a.header__address {
   padding-left: 40px;
   padding-bottom: 27px;
   color: #000;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -168,7 +163,7 @@ a.header__address {
 
 .lots__card-list-item {
   width: 430px;
-  height: 450px;
+  min-height: 450px;
   flex-grow: 1;
 }
 
@@ -271,14 +266,14 @@ a.header__address {
   line-height: normal;
 }
 
-.about__text__margin_bottom {
-  margin-bottom: 29px;
+.about__text:last-child {
+  margin-top: 27px;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 180px 50px 90px;
+  padding: 182px 50px 90px;
 }
 
 .footer__menu {
@@ -298,5 +293,6 @@ a.header__address {
 }
 
 .footer__social-icon {
+  width: 48px;
   height: 48px;
 }
