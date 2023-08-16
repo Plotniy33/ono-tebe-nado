@@ -266,8 +266,12 @@ a {
   line-height: normal;
 }
 
+.about__text {
+  padding-bottom: 27px;
+}
+
 .about__text:last-child {
-  margin-top: 27px;
+  padding-bottom: 0;
 }
 
 .footer {
